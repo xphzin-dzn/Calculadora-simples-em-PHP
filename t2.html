@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 10px;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+        }
+        h1{
+            color: white;
+            
+        }
+
+        .container {
+            max-width: 800px;
+            background: #fff;
+            width: 800px;
+            padding: 25px 40px 10px 40px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container .text {
+            text-align: center;
+            font-size: 41px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        @media (max-width: 700px) {
+            .container .text {
+                font-size: 30px;
+            }
+
+            .container form {
+                padding: 10px 0 0 0;
+            }
+
+            .container form .form-row {
+                display: block;
+            }
+
+            form .form-row .input-data {
+                margin: 35px 0 !important;
+            }
+
+            .submit-btn .input-data {
+                width: 40% !important;
+            }
+        }
+    </style>
+<container>
+    <h1> Calculadora </h1>
+    <form action="tela.php" method="POST">
+        Selecione a operação: <br />
+        <select name="searchtype">
+            <option value="soma"> Soma </option>
+            <option value="sub"> Subtração </option>
+            <option value="vezes"> Multiplicação </option>
+            <option value="divisao"> Divisão </option>
+        </select>
+        <br>
+        <br>
+        Coloque cada número<br>
+        <input name="numero1" type="number">
+        <br>
+        <input name="numero2" type="number">
+        <br> <br>
+        <input type="submit" value="Calcula">
+    </form>
+</container>
+</body>
+
+</html>
